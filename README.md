@@ -8,20 +8,20 @@ An elegant, efficient and easy-to-setup Last.fm discord rich presence
 
 This Last.FM Discord Rich Presence works with all music platforms that Last.fm supports; such as:
 
-[x] Spotify - Works best
-[x] iTunes or Apple Music
-[x] Youtube
-[x] Google Play Music
-[x] Tidal
-[x] Deezer
-[x] SoundCloud
-[x] Mixcloud
-[x] Sonos
-[x] Hype Machine
-[x] 8tracks
-[x] Bandcamp
-[x] Pandora
-[x] And many more!
+- [x] Spotify - Works best
+- [x] iTunes or Apple Music
+- [x] Youtube
+- [x] Google Play Music
+- [x] Tidal
+- [x] Deezer
+- [x] SoundCloud
+- [x] Mixcloud
+- [x] Sonos
+- [x] Hype Machine
+- [x] 8tracks
+- [x] Bandcamp
+- [x] Pandora
+- [x] And many more!
 
 ## Requirements
 
