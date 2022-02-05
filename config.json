@@ -1,8 +1,8 @@
 {
-	"ClientID": "",
+	"ClientID": "936982107106967602",
 	"Lastfm": {
-		"Username": "",
-		"API_Key": "",
-		"API_Secret": ""
-	}
+		"Username": "YOUR LAST.FM ACCOUNT USERNAME",
+		"API_Key": "YOUR LAST.FM API KEY"
+	},
+	"UpdateDelay": "30000"
 }

@@ -1,34 +1,35 @@
 {
-  "name": "last.fm-discord-rich-presence",
-  "version": "1.0.0",
-  "description": "An elegant, efficient and easy-to-setup Last.fm discord rich presence",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Monochromish/Last.fm-Discord-Rich-Presence.git"
-  },
-  "keywords": [
-    "Last.fm",
-    "Discord",
-    "Rich",
-    "Presence",
-    "JavaScript",
-    "Elegant",
-    "Efficient",
-    "Easy-to-setup"
-  ],
-  "author": "Monochromish",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Monochromish/Last.fm-Discord-Rich-Presence/issues"
-  },
-  "homepage": "https://github.com/Monochromish/Last.fm-Discord-Rich-Presence#readme",
-  "dependencies": {
-    "consola": "^2.15.3",
-    "discord-rpc": "^4.0.1",
-    "lastfm": "^0.9.0"
-  }
+	"name": "last.fm-discord-rich-presence",
+	"version": "2.0.0",
+	"description": "An elegant, efficient and easy-to-setup Last.fm discord rich presence",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Monochromish/Last.fm-Discord-Rich-Presence.git"
+	},
+	"keywords": [
+		"Last.fm",
+		"Discord",
+		"Rich",
+		"Presence",
+		"JavaScript",
+		"Elegant",
+		"Efficient",
+		"Easy-to-setup"
+	],
+	"author": "Monochromish",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Monochromish/Last.fm-Discord-Rich-Presence/issues"
+	},
+	"homepage": "https://github.com/Monochromish/Last.fm-Discord-Rich-Presence#readme",
+	"dependencies": {
+		"consola": "^2.15.3",
+		"discord-rpc": "^4.0.1",
+		"pretty-ms": "^7.0.1",
+		"request-promise": "^4.2.6"
+	}
 }

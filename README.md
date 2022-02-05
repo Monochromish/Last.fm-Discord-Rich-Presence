@@ -1,8 +1,11 @@
 # Last.FM Discord Rich Presence
 
-An elegant, efficient and easy-to-setup Last.fm discord rich presence
+An elegant, efficient, easy-to-setup and arguably the best Last.fm discord rich presence!
 
-![alt text](example.png 'Example')
+Supports GIF album covers and provides information such as `Track name`, `Track Album`, `Track Artist`, `Last Played`, `Your Scrobbles` and much more!
+Customizable and by default, it updates status every 30 seconds.
+
+![alt text](Example.gif 'Example')
 
 ## Works with
 
@@ -38,18 +41,22 @@ This Last.FM Discord Rich Presence works with all music platforms that Last.fm s
 
 ```js
 {
-    "ClientID": "YOUR DISCORD APPLICATION ID HERE. KEEP IN MIND THIS WOULD BE THE NAME OF YOUR RICH PRESENCE",
+    "ClientID": "936982107106967602", //Don't change this unless you have a discord client application of your own. | Optional
     "Lastfm": {
-        "Username": "YOUR LAST.FM ACCOUNT USERNAME",
-        "API_Key": "YOUR LAST.FM API KEY",
-        "API_Secret": "YOUR LAST.FM API SECRET"
-    }
+        "Username": "YOUR LAST.FM ACCOUNT USERNAME", //Required
+        "API_Key": "YOUR LAST.FM API KEY" //Required
+    },
+    "UpdateDelay": "30000" //Don't change this unless you know what you are doing; Decreasing this may cause errors or may possible get your API rate-limited!
 }
 ```
 
 Save changes and open start.bat file.
 
+## Contribution and issues
+
+Feel free to fork this repository and create pull requests, I will review them when I get notified.
+
 ## Credits
 
-Code for this rich presence was written by [Monochromish](https://monolul.me).
+Code for this rich presence was fully written by [Monochromish](https://monolul.me) (_at the time of writing this_) and no credits to me are being provided in the rich presence! Please share this repository to support this project.
 If you come across any errors or need help with setting up, feel free to DM me on Discord.
