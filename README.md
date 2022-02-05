@@ -46,7 +46,7 @@ This Last.FM Discord Rich Presence works with all music platforms that Last.fm s
         "Username": "YOUR LAST.FM ACCOUNT USERNAME", //Required
         "API_Key": "YOUR LAST.FM API KEY" //Required
     },
-    "UpdateDelay": "30000" //Don't change this unless you know what you are doing; Decreasing this may cause errors or may possible get your API rate-limited!
+    "UpdateDelay": "30000" //Don't change this unless you know what you are doing; Decreasing this may cause errors or may possible get your API rate-limited! | Required
 }
 ```
 
