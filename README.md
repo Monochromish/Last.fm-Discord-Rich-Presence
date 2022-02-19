@@ -1,6 +1,6 @@
 # Last.FM Discord Rich Presence
 
-An elegant, efficient, easy-to-setup and arguably the best Last.fm discord rich presence!
+An elegant, efficient, easy-to-setup and arguably the best Last.fm discord rich presence! Written in Electron with daisyUI.
 
 Supports GIF album covers and provides information such as `Track name`, `Track Album`, `Track Artist`, `Last Played`, `Your Scrobbles` and much more!
 Customizable and by default, it updates status every 30 seconds.
@@ -30,27 +30,13 @@ This Last.FM Discord Rich Presence works with all music platforms that Last.fm s
 
 1. Node.js from [here](https://nodejs.org).
 2. Last.fm account from [here](https://www.last.fm/join) and a Last.fm API from [here](https://www.last.fm/api/account/create).
-3. A Discord Application from [here](https://discord.com/developers/applications)
+3. **Optional** - A Discord Application from [here](https://discord.com/developers/applications)
 
 ## How to setup
 
-1. Download or Clone this repository.
-2. Open terminal or console in the root folder and run `npm install`. This is a one-time operation; It installs the required dependencies.
-3. Open the file named config.json in a text editor or an IDE and modify it.
-   It should then look something like this:
-
-```js
-{
-    "ClientID": "936982107106967602", //Don't change this unless you have a discord client application of your own. | Optional
-    "Lastfm": {
-        "Username": "YOUR LAST.FM ACCOUNT USERNAME", //Required
-        "API_Key": "YOUR LAST.FM API KEY" //Required
-    },
-    "UpdateDelay": "30000" //Don't change this unless you know what you are doing; Decreasing this may cause errors or may possible get your API rate-limited!
-}
-```
-
-Save changes and open start.bat file.
+1. Download the windows binary from its [website](https://www.lastfmrichpresence.tk) or from the [releases tab](https://github.com/Monochromish/Last.fm-Discord-Rich-Presence/releases).
+2. Run the setup. If you get a **Windows SmartScreen Protection Popup**, click on the `More info` button and then click on `Run anyway` button. Complete the setup and run the application.
+3. Provide your details and then click on the `Enable/Disable` button.
 
 ## Contribution and issues
 

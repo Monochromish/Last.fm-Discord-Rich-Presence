@@ -1,0 +1,81 @@
+<html data-theme="cupcake">
+  <center>
+	<link rel="stylesheet" type="text/css" href="output.css" />
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+		<title>Last.fm Rich Presence</title>
+	</head>
+  <body style="color:#d5ccff">
+		<header id="titlebar">
+      <img src="./icons/logo.png" alt="Logo" animation="float 5s ease-in-out infinite" width="144" height="144" />
+			<h1>Last.fm Rich Presence</h1>
+			<h2>An elegant, efficient, easy-to-setup and arguably the best Last.fm discord rich presence!<h2>
+        <br>
+		</header>
+      <div class="container">
+        <form id="post-presence">
+          <div class="field">
+            <p style="color:#d5ccff">Last.fm Username</p><br>
+            <div class="control">
+              <input type="text" placeholder="Last.fm Username 〣 Required" class="input input-bordered input-accent w-full max-w-xs" required="true" id="username">
+            </div>
+          </div>
+          <br>
+          <div class="field">
+            <p style="color:#d5ccff">Last.fm API Key</p><br>
+            <div class="control">
+              <input type="password" placeholder="Last.fm API Key 〣 Required" class="input input-bordered input-accent w-full max-w-xs" required="true" id="key">
+            </div>
+          </div>
+          <br>
+          <div class="field">
+            <p style="color:#d5ccff">Application Client ID</p><br>
+            <div class="control">
+              <input type="text" placeholder="Application Client ID 〣 Optional" class="input input-bordered input-accent w-full max-w-xs" id="clientid">
+            </div>
+          </div>
+          <br>
+          <button class="btn btn-accent" type="submit" id="submit">Enable / Disable</button>
+        </form>
+      </div>
+      <br>
+    </body>
+    <footer class="p-10 footer bg-base-200 text-base-content footer-center rounded">
+      <div>
+        <div class="grid grid-flow-col gap-4">
+          <a href="https://github.com/Monochromish/Last.fm-Discord-Rich-Presence" target="_blank" rel="noopener noreferrer"><img src = "./icons/GitHub.png" alt="GitHub"/></a> 
+        </div>
+      </div> 
+      <div>
+        <p>Copyright © 2022 - All right reserved by Monochromish</p>
+        <p>Noticed a typo, an error, or want to contribute? open a new issue on <a href="https://github.com/Monochromish/Last.fm-Discord-Rich-Presence">GitHub</p>
+      </div>
+    </footer>
+      <script>
+      const form = document.getElementById('post-presence')
+      form.addEventListener('submit', startrpc)
+      async function startrpc(event) {
+        event.preventDefault();
+        const clientid = document.getElementById('clientid').value || '936982107106967602';
+        const username = document.getElementById('username').value;
+        const key = document.getElementById('key').value;
+        const result = await fetch('http://localhost:3000/api/post-presence', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            clientid,
+            username,
+            key
+          })
+        }).then((res) => res.json())
+        console.log(result)
+        if(result.status !== "ok") {
+          alert(result.error)
+        }
+      }
+      </script>
+</center>
+</html>
