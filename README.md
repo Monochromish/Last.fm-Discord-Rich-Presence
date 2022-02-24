@@ -4,6 +4,7 @@
 <img src="https://img.shields.io/github/v/release/Monochromish/Last.fm-Discord-Rich-Presence?color=302f3d&include_prereleases&style=for-the-badge" alt="Badge">
 <img src="https://img.shields.io/github/stars/Monochromish/Last.fm-Discord-Rich-Presence?color=302f3d&style=for-the-badge" alt="Badge">
 <img src="https://img.shields.io/github/forks/Monochromish/Last.fm-Discord-Rich-Presence?color=302f3d&style=for-the-badge" alt="Badge">
+<img src="https://img.shields.io/discord/946515105443610654?color=302f3d&style=for-the-badge" alt="Badge">
 </p>
 
 An elegant, efficient, easy-to-setup and arguably the best Last.fm discord rich presence! Written in Electron with daisyUI.
