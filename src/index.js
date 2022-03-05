@@ -116,7 +116,9 @@ server.post('/api/post-presence', (req, res) => {
 						? `Last scrobbled ${prettyMilliseconds(Date.now() - lastTrack.recenttracks.track[0].date.uts * 1000)} ago
 					`
 						: 'Now scrobbling',
-					cover: lastTrack.recenttracks.track[0].image[lastTrack.recenttracks.track[0].image.length - 1]['#text']
+					cover:
+						lastTrack.recenttracks.track[0].image[lastTrack.recenttracks.track[0].image.length - 1]['#text'] ||
+						'https://lastfm.freetls.fastly.net/i/u/64s/2a96cbd8b46e442fc41c2b86b821562f.png' // Fixed no album bug - https://github.com/Monochromish/Last.fm-Discord-Rich-Presence/issues/3#issue-1157573199
 				};
 			}
 			return data;
