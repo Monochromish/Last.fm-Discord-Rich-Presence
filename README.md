@@ -4,6 +4,7 @@
 <img src="https://img.shields.io/github/v/release/Monochromish/Last.fm-Discord-Rich-Presence?color=302f3d&include_prereleases&style=for-the-badge" alt="Badge">
 <img src="https://img.shields.io/github/stars/Monochromish/Last.fm-Discord-Rich-Presence?color=302f3d&style=for-the-badge" alt="Badge">
 <img src="https://img.shields.io/github/forks/Monochromish/Last.fm-Discord-Rich-Presence?color=302f3d&style=for-the-badge" alt="Badge">
+<img src="https://img.shields.io/discord/946515105443610654?color=302f3d&style=for-the-badge" alt="Badge">
 </p>
 
 An elegant, efficient, easy-to-setup and arguably the best Last.fm discord rich presence! Written in Electron with daisyUI.
@@ -56,4 +57,4 @@ To create an environment, you would have to open the root folder in a terminal a
 | [Monochromish](https://github.com/Monochromish) 	|
 
 Code for this rich presence was fully written by [Monochromish](https://monolul.me) (_at the time of writing this_) and no credits to me are being provided in the rich presence! Please share this repository to support this project.
-If you come across any errors or need help with setting up, feel free to DM me on Discord.
+If you come across any errors or need help with setting up, feel free to DM me on Discord or join my [development server](https://discord.com/invite/E6z5ZmsV4m).
