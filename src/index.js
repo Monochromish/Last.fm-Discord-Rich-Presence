@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Tray, Menu, shell, Notification, dialog } = require('electron');
+const { app, BrowserWindow, Tray, Menu, shell, Notification } = require('electron');
 const path = require('path');
 const DiscordRPC = require('discord-rpc');
 const fetch = require('request-promise');
@@ -14,29 +14,6 @@ let status = false;
 if (require('electron-squirrel-startup')) {
 	app.quit();
 }
-
-const createWindow = () => {
-	const mainWindow = new BrowserWindow({
-		autoHideMenuBar: false,
-		width: 1280,
-		height: 720,
-		minWidth: 1024,
-		minHeight: 550,
-		maximizable: true,
-		resizable: true,
-		frame: true,
-		icon: iconPath,
-		show: false,
-		autoHideMenuBar: true.valueOf,
-		webPreferences: {
-			nodeIntegration: true,
-			enableRemoteModule: true
-		}
-	});
-
-	mainWindow.on('ready-to-show', mainWindow.show);
-	mainWindow.loadFile(path.join(__dirname, 'index.html'));
-};
 
 server.use(express.json());
 
@@ -168,35 +145,73 @@ server.post('/api/post-presence', (req, res) => {
 	}
 });
 
-function createSystemTray() {
+app.on('ready', function () {
+	let isQuiting;
+
+	app.on('before-quit', function () {
+		isQuiting = true;
+	});
+
+	const mainWindow = new BrowserWindow({
+		autoHideMenuBar: false,
+		width: 1280,
+		height: 720,
+		minWidth: 1024,
+		minHeight: 550,
+		maximizable: true,
+		resizable: true,
+		frame: true,
+		icon: iconPath,
+		show: false,
+		autoHideMenuBar: true.valueOf,
+		webPreferences: {
+			nodeIntegration: true,
+			enableRemoteModule: true
+		}
+	});
+
+	mainWindow.on('ready-to-show', mainWindow.show);
+	mainWindow.loadFile(path.join(__dirname, 'index.html'));
+
+	mainWindow.on('minimize', function (event) {
+		new Notification({ title: `Minimizing to System Tray`, body: `Use the app icon on system tray to show again` }).show()
+		event.preventDefault();
+		mainWindow.hide();
+	});
+	
+	mainWindow.on('close', function (event) {
+		if(!isQuiting){
+			new Notification({ title: `Minimizing to System Tray`, body: `Use the app icon on system tray to show again` }).show()
+			event.preventDefault();
+			mainWindow.hide();
+		}
+	
+		return false;
+	});
+
 	appIcon = new Tray(iconPath);
 	var contextMenu = Menu.buildFromTemplate([
 		{
-			label: 'Last.fm Rich Presence',
+			label: 'Show App', click: () => mainWindow.show()
+		},
+		{
+			label: 'Repository',
 			click: function () {
 				shell.openPath('https://github.com/Monochromish/Last.fm-Discord-Rich-Presence');
 			}
 		},
-		{ label: 'Quit', type: 'normal', click: () => app.quit() }
+		{ label: 'Quit', type: 'normal', click: function() { 
+			isQuiting = true;
+			app.quit()
+		} }
 	]);
 	appIcon.setToolTip('Last.fm Rich Presence');
 	appIcon.setContextMenu(contextMenu);
-}
-
-app.on('ready', function () {
-	createWindow();
-	createSystemTray();
 });
 
 app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') {
 		app.quit();
-	}
-});
-
-app.on('activate', () => {
-	if (BrowserWindow.getAllWindows().length === 0) {
-		createWindow();
 	}
 });
 
