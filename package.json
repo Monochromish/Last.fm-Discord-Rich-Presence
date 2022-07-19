@@ -1,7 +1,7 @@
 {
 	"name": "last.fm-rich-presence",
 	"productName": "Last.fm Rich Presence",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "An elegant, efficient, easy-to-setup and arguably the best Last.fm discord rich presence!",
 	"main": "src/index.js",
 	"scripts": {
