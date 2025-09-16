@@ -12,8 +12,6 @@ An elegant, efficient, easy-to-setup and arguably the best Last.fm discord rich 
 Supports GIF album covers and provides information such as `Track name`, `Track Album`, `Track Artist`, `Last Played`, `Your Scrobbles` and much more!
 Customizable and by default, it updates status every 30 seconds.
 
-![Example](Example.gif 'Example')
-
 ## Works with
 
 This Last.FM Discord Rich Presence works with all music platforms that Last.fm supports; such as:
